@@ -7,12 +7,13 @@
 
 (def app-state (atom {:text "Hello Chestnut!"}))
 
+(defcomponent app-view
+  [app owner]
+  (render [_]
+          (dom/h1 (:text app))))
+
 (defn main []
   (om/root
-    (fn [app owner]
-      (reify
-        om/IRender
-        (render [_]
-          (dom/h1 (:text app)))))
+    app-view
     app-state
     {:target (. js/document (getElementById "app"))}))
