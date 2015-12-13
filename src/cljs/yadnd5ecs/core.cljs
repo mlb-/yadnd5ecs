@@ -5,7 +5,7 @@
 
 (enable-console-print!)
 
-(defonce app-state (atom {:text "Hello Chestnut!"}))
+(def app-state (atom {:text "Hello Chestnut!"}))
 
 (defn main []
   (om/root
