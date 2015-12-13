@@ -28,6 +28,10 @@ I'm trying my hand.
   can proceed to create the logic to compute all derived values in the
   UI.
 
+- Upon discovery of no available character sheet in the Player's
+  Handbook I have available, I am now considering implementing this
+  character sheet in the order presented for character creation.
+
 ## Development
 
 Open a terminal and type `lein repl` to start a Clojure REPL
