@@ -1,5 +1,14 @@
 # yadnd5ecs
 
+Yet another Dugeons and Dragons 5th edition character sheet.
+
+## Rationale
+
+I'm a 3rd/3.5/Pathfinder kind of guy, but gave 5th edition a
+chance. The jump to 5th edition was different enough that character
+creation required assistance, and all character sheet tools I tried
+were lackluster. I thought the state of the tools was unfortunate, so
+I'm trying my hand.
 
 ## Development
 
@@ -81,7 +90,7 @@ Now your app is running at
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 Matthew Batema
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.

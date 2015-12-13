@@ -1,6 +1,6 @@
 (defproject yadnd5ecs "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Yet another Dungeons and Dragons 5th edition character sheet"
+  :url "https://github.com/mlb-/yadnd5ecs"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
