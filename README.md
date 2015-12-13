@@ -10,6 +10,24 @@ creation required assistance, and all character sheet tools I tried
 were lackluster. I thought the state of the tools was unfortunate, so
 I'm trying my hand.
 
+### Implementation Roadmap
+
+- Initially, I imagined Clojure's collections would make dice rolling
+  simple to emulate. Then I started considering re-rolls, keeping the
+  n highest or lowest, etc. It got complicated quickly.
+
+- Then, in traditional LISP fashion, I considered data structures
+  representing the formulas describing what to roll, as well as data
+  structures representing the result of such rolls. A model,
+  independent a UI designed around it, could be developed in
+  depth. This could quickly become a rabbit hole and provide no
+  progress made on the UI any time soon.
+
+- And now, in traditional React fashion, I've considered simply
+  providing a skeleton layout of all non-derived data. After which, I
+  can proceed to create the logic to compute all derived values in the
+  UI.
+
 ## Development
 
 Open a terminal and type `lein repl` to start a Clojure REPL
