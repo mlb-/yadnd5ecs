@@ -6,7 +6,29 @@
 (enable-console-print!)
 
 (def app-state (atom {:name {:player "Bob"
-                             :character "Bruenor"}}))
+                             :character "Bruenor"}
+                      :race {:main :dwarf
+                             :subrace :mountain}}))
+
+(def races
+  {:dwarf {:ability-score-increase [{:constitution 2}]
+           :age "Dwarves mature at the same rate as humans, but
+           they’re considered young until they reach the age of 50. On
+           average, they live about 350 years."
+           :alignment "Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that everyone deserves to share in the benefits of a just order."
+           :size "Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium."
+           :speed "25 feet"
+           :traits ["Darkvision"
+                    "Dwarven Resilience"
+                    "Dwarven Combat Training"
+                    "Tool Proficiency"
+                    "Stonecunning"]
+           :languages ["Common"
+                       "Dwarvish"]
+           :subraces {:hill {:ability-score-increases [{:wisdom 1}]
+                             :traits ["Dwarven Toughness"]}
+                      :mountain {:ability-score-increases [{:strength 2}]
+                                 :traits ["Dwarven Armor Training"]}}}})
 
 (defcomponent name-view
   [name owner]
