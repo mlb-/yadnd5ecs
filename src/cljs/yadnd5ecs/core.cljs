@@ -40,6 +40,34 @@
       (dom/h1 (str "Name: " player))
       (dom/h1 (str "Character: " character))))))
 
+(defcomponent race-view
+  [race owner]
+  (render
+   [_]
+   (let [{:keys [main subrace]} race
+         race-info (main races)
+         subrace-info (-> race-info
+                          :subraces
+                          subrace)
+         {:keys [traits languages speed]} subrace-info
+         traits (into (:traits race-info)
+                      traits)
+         languages (into (:languages race-info)
+                         languages)
+         speed (or speed
+                   (:speed race-info))]
+     (dom/span
+      (dom/h1 "Race stuff")
+      (dom/h2 "Traits:"
+              (dom/ul
+               (map dom/li
+                    traits)))
+      (dom/h2 "Languages:"
+              (dom/ul
+               (map dom/li
+                    languages)))
+      (dom/h2 "Base speed: " speed)))))
+
 (defcomponent app-view
   [app owner]
   (render
@@ -49,7 +77,8 @@
                  (when-let [name (-> app :name :player)]
                    (str " (" name ")"))
                  "!"))
-    (om/build name-view (:name app)))))
+    (om/build name-view (:name app))
+    (om/build race-view (:race app)))))
 
 (defn main []
   (om/root
